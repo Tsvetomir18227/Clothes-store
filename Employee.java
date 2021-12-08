@@ -4,7 +4,7 @@ public class Employee {
 
     private static double ePrice;
     private String name, family, egn, email, password, username;
-    protected static ArrayList<Employee> emps = new ArrayList<>();
+    public static ArrayList<Employee> emps = new ArrayList<>();
 
     static {
         emps.add(new Employee("Ivan", "Ivanov", "9800000000", "ivan_ivanov@abv.bg", "1234i", "ii"));
@@ -118,43 +118,49 @@ public class Employee {
 
         int currentProduct = 0;
         int serialNum = 0;
+        String input;
         for (Clothes cl : Clothes.clothesStorage) {
             cl.getAllClothesEmpV(currentProduct);
             currentProduct++;
         }
         currentProduct = 0;
-        while (serialNum != -434343434) {
-            System.out.println("Изберете '1' ако искате да продължите да редактирате и '2' ако искате да се върнете");
-            String input = App.scan.nextLine();
-            switch (input) {
-                case "1":
-                    System.out.println("Изберете един продукт по серийния му номер.");
-                    serialNum = App.scan.nextInt();
-                    if (serialNum > -1 && serialNum < Clothes.clothesStorage.toArray().length) {
-                        System.out.println("Избрахте следния продукт : ");
-                        System.out.println(Clothes.clothesStorage.get(serialNum).toString());
-                        System.out.print("Въведете новата цена на продукта : ");
-                        double ePrice = App.scan.nextDouble();
-                        System.out.println("");
-                        if (ePrice == Clothes.clothesStorage.get(serialNum).getClothePrice()) {
-                            System.out.println("Цената остана същата.");
-                        } else if (ePrice != Clothes.clothesStorage.get(serialNum).getClothePrice() && ePrice >= 0) {
-                            Clothes.clothesStorage.get(serialNum).setClothePrice(ePrice);
-                            System.out.println("Променихте цената успешно.");
-                        } else {
-                            System.out.println("Невалидна сума.");
-                        }
-                    } else if (serialNum < -1 || serialNum > Clothes.clothesStorage.toArray().length) {
-                        System.out.println("Няма такъв сериен номер");
 
+        do{
+            System.out.println("Изберете '1' ако искате да продължите да редактирате и '2' ако искате да се върнете");
+
+            input = App.scan.nextLine();
+
+            if(input.equals("1")){
+                System.out.println("Изберете един продукт по серийния му номер.");
+                serialNum = Integer.parseInt(App.scan.nextLine());
+                if (serialNum > -1 && serialNum < Clothes.clothesStorage.toArray().length) {
+                    System.out.println("Избрахте следния продукт : ");
+                    System.out.println(Clothes.clothesStorage.get(serialNum).toString());
+                    System.out.print("Въведете новата цена на продукта : ");
+                    double ePrice = Double.parseDouble(App.scan.nextLine());
+                    System.out.println("");
+                    if (ePrice == Clothes.clothesStorage.get(serialNum).getClothePrice()) {
+                        System.out.println("Цената остана същата.");
+                    } else if (ePrice != Clothes.clothesStorage.get(serialNum).getClothePrice() && ePrice >= 0) {
+                        Clothes.clothesStorage.get(serialNum).setClothePrice(ePrice);
+                        System.out.println("Променихте цената успешно.");
+                    } else {
+                        System.out.println("Невалидна сума.");
                     }
-                    break;
-                case "2":
-                    employeeFirstPage();
-                    break;
+                } else if (serialNum < -1 || serialNum > Clothes.clothesStorage.toArray().length) {
+                    System.out.println("Няма такъв сериен номер");
+
+                }
+            }
+            else if (input.equals("2")){
+                employeeFirstPage();
 
             }
+
+
+
         }
+        while (input != "2");
 
 
     }

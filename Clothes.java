@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.IOException;
 import java.util.*;
 
 public class Clothes {
@@ -6,43 +8,50 @@ public class Clothes {
     public double clothePrice;
     public static ArrayList<Clothes> clothesStorage = new ArrayList<>();
 
-    static {
-        clothesStorage.add(new Clothes("Анцунг", "XS", "Flair", "светло-сив", 50, "пролет, есен", "Мъжко"));
-        clothesStorage.add(new Clothes("Анцунг", "S", "ZARA", "червен", 40, "пролет", "Мъжко"));
-        clothesStorage.add(new Clothes("Анцунг", "M", "Flair", "син", 30, "пролет, есен", "Мъжко"));
-        clothesStorage.add(new Clothes("Анцунг", "L", "HM", "бял", 35, "пролет, есен, зима", "Мъжко"));
-        clothesStorage.add(new Clothes("Анцунг", "L", "Nike", "черен", 25, "пролет, есен", "Дамско"));
-        clothesStorage.add(new Clothes("Анцунг", "XL", "Flair", "бял", 50, "пролет, есен", "Дамско"));
-        clothesStorage.add(new Clothes("Анцунг", "L", "Nike", "зелен", 35, "пролет, есен, зима", "Дамско"));
-        clothesStorage.add(new Clothes("Анцунг", "XL", "Flair", "бордо", 35, "пролет, есен, зима", "Дамско"));
+   /* public static void file() throws IOException {
+        Scanner scan = new Scanner(new File("data/Storage.txt"));
+        while(scan.hasNextLine()){
+            clothesStorage.add(scan.nextLine());
 
-        clothesStorage.add(new Clothes("Тениска", "L", "Puma", "сив", 25, "лято", "Мъжко"));
-        clothesStorage.add(new Clothes("Тениска", "XL", "HM", "сив", 50, "лято", "Мъжко"));
-        clothesStorage.add(new Clothes("Тениска", "S", "Lacoste", "жълт", 30, "лято", "Мъжко"));
-        clothesStorage.add(new Clothes("Тениска", "XS", "Gucci", "син", 50, "лято", "Мъжко"));
-        clothesStorage.add(new Clothes("Тениска", "M", "Tom Tailor", "циан", 20, "лято", "Дамско"));
-        clothesStorage.add(new Clothes("Тениска", "L", "Gucci", "зелен", 17, "лято", "Дамско"));
-        clothesStorage.add(new Clothes("Тениска", "M", "LCW", "циан", 20, "лято", "Дамско"));
-        clothesStorage.add(new Clothes("Тениска", "XS", "Nike", "кафяв", 25, "лято", "Дамско"));
+        }
+    }*/
+   static {
+       clothesStorage.add(new Clothes("Анцунг", "XS", "Flair", "светло-сив", 50, "пролет, есен", "Мъжко"));
+       clothesStorage.add(new Clothes("Анцунг", "S", "ZARA", "червен", 40, "пролет", "Мъжко"));
+       clothesStorage.add(new Clothes("Анцунг", "M", "Flair", "син", 30, "пролет, есен", "Мъжко"));
+       clothesStorage.add(new Clothes("Анцунг", "L", "HM", "бял", 35, "пролет, есен, зима", "Мъжко"));
+       clothesStorage.add(new Clothes("Анцунг", "L", "Nike", "черен", 25, "пролет, есен", "Дамско"));
+       clothesStorage.add(new Clothes("Анцунг", "XL", "Flair", "бял", 50, "пролет, есен", "Дамско"));
+       clothesStorage.add(new Clothes("Анцунг", "L", "Nike", "зелен", 35, "пролет, есен, зима", "Дамско"));
+       clothesStorage.add(new Clothes("Анцунг", "XL", "Flair", "бордо", 35, "пролет, есен, зима", "Дамско"));
 
-        clothesStorage.add(new Clothes("Суичър", "L", "LCW", "син", 35, "есен", "Мъжко"));
-        clothesStorage.add(new Clothes("Суичър", "L", "Lacoste", "кафяв", 65, "пролет, есен, зима", "Мъжко"));
-        clothesStorage.add(new Clothes("Суичър", "M", "Adidas", "черен", 35, "есен", "Мъжко"));
-        clothesStorage.add(new Clothes("Суичър", "XL", "Puma", "червен", 45, "есен", "Мъжко"));
-        clothesStorage.add(new Clothes("Суичър", "S", "Nike", "розов", 50, "пролет, есен", "Дамско"));
-        clothesStorage.add(new Clothes("Суичър", "M", "Adidas", "бежов", 25, "пролет, есен", "Дамско"));
-        clothesStorage.add(new Clothes("Суичър", "XL", "Nike", "светло-сив", 50, "есен", "Дамско"));
-        clothesStorage.add(new Clothes("Суичър", "L", "Puma", "бял", 43, "лято, есен", "Дамско"));
+       clothesStorage.add(new Clothes("Тениска", "L", "Puma", "сив", 25, "лято", "Мъжко"));
+       clothesStorage.add(new Clothes("Тениска", "XL", "HM", "сив", 50, "лято", "Мъжко"));
+       clothesStorage.add(new Clothes("Тениска", "S", "Lacoste", "жълт", 30, "лято", "Мъжко"));
+       clothesStorage.add(new Clothes("Тениска", "XS", "Gucci", "син", 50, "лято", "Мъжко"));
+       clothesStorage.add(new Clothes("Тениска", "M", "Tom Tailor", "циан", 20, "лято", "Дамско"));
+       clothesStorage.add(new Clothes("Тениска", "L", "Gucci", "зелен", 17, "лято", "Дамско"));
+       clothesStorage.add(new Clothes("Тениска", "M", "LCW", "циан", 20, "лято", "Дамско"));
+       clothesStorage.add(new Clothes("Тениска", "XS", "Nike", "кафяв", 25, "лято", "Дамско"));
 
-        clothesStorage.add(new Clothes("Дънки", "S", "HM", "светло-сив", 44, "пролет, есен", "Мъжко"));
-        clothesStorage.add(new Clothes("Дънки", "XL", "LCW", "черен", 30, "пролет, есен", "Мъжко"));
-        clothesStorage.add(new Clothes("Дънки", "L", "ZARA", "бежов", 45, "пролет", "Мъжко"));
-        clothesStorage.add(new Clothes("Дънки", "L", "LCW", "син", 30, "пролет, есен", "Мъжко"));
-        clothesStorage.add(new Clothes("Дънки", "M", "HM", "тъмно-син", 35, "пролет", "Дамско"));
-        clothesStorage.add(new Clothes("Дънки", "XS", "Adidas", "син", 50, "пролет", "Дамско"));
-        clothesStorage.add(new Clothes("Дънки", "S", "Tom Tailor", "тъмно-сив", 35, "пролет", "Дамско"));
-        clothesStorage.add(new Clothes("Дънки", "XS", "Adidas", "син", 50, "пролет", "Дамско"));
-    }
+       clothesStorage.add(new Clothes("Суичър", "L", "LCW", "син", 35, "есен", "Мъжко"));
+       clothesStorage.add(new Clothes("Суичър", "L", "Lacoste", "кафяв", 65, "пролет, есен, зима", "Мъжко"));
+       clothesStorage.add(new Clothes("Суичър", "M", "Adidas", "черен", 35, "есен", "Мъжко"));
+       clothesStorage.add(new Clothes("Суичър", "XL", "Puma", "червен", 45, "есен", "Мъжко"));
+       clothesStorage.add(new Clothes("Суичър", "S", "Nike", "розов", 50, "пролет, есен", "Дамско"));
+       clothesStorage.add(new Clothes("Суичър", "M", "Adidas", "бежов", 25, "пролет, есен", "Дамско"));
+       clothesStorage.add(new Clothes("Суичър", "XL", "Nike", "светло-сив", 50, "есен", "Дамско"));
+       clothesStorage.add(new Clothes("Суичър", "L", "Puma", "бял", 43, "лято, есен", "Дамско"));
+
+       clothesStorage.add(new Clothes("Дънки", "S", "HM", "светло-сив", 44, "пролет, есен", "Мъжко"));
+       clothesStorage.add(new Clothes("Дънки", "XL", "LCW", "черен", 30, "пролет, есен", "Мъжко"));
+       clothesStorage.add(new Clothes("Дънки", "L", "ZARA", "бежов", 45, "пролет", "Мъжко"));
+       clothesStorage.add(new Clothes("Дънки", "L", "LCW", "син", 30, "пролет, есен", "Мъжко"));
+       clothesStorage.add(new Clothes("Дънки", "M", "HM", "тъмно-син", 35, "пролет", "Дамско"));
+       clothesStorage.add(new Clothes("Дънки", "XS", "Adidas", "син", 50, "пролет", "Дамско"));
+       clothesStorage.add(new Clothes("Дънки", "S", "Tom Tailor", "тъмно-сив", 35, "пролет", "Дамско"));
+       clothesStorage.add(new Clothes("Дънки", "XS", "Adidas", "син", 50, "пролет", "Дамско"));
+   }
 
     public Clothes() {
 
