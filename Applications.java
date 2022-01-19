@@ -1,4 +1,4 @@
-public class Applications extends Employee {
+public class Applications extends Employee {//За name,family,egn,email,password,username
     private int age, experience;
     private String education;
 
@@ -50,8 +50,8 @@ public class Applications extends Employee {
             System.out.println("Приет сте!");
             Employee e1 = new Employee(enteredName, enteredFamily, enteredEGN, enteredEmail, enteredPassword, enteredUsername);
             emps.add(e1);
-            System.out.println("Вашият профил:" + "\n Username : " + e1.getUsername() + "\n E-mail : " + e1.getEmail() + "\n Password : " + e1.getPassword());
-            App.main(null);
+            System.out.println("Вашият профил:" + "\n Username : " + e1.getUsername() + "\n E-mail : " + e1.getEmail() + "\n Password : " + e1.getPassword() + "\n" );
+            Employee.employeeFirstPage();
         } else if (enteredExperience > enteredAge - 18) {
             System.out.println("Опита не съответства на вашите години!");
         } else if(enteredEGN.length() != 10){
